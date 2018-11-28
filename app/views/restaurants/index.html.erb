@@ -23,7 +23,7 @@
         <td><%= restaurant.name %></td>
         <td><%= restaurant.address %></td>
         <td><%= restaurant.phone %></td>
-        <td><%= restaurant.website %></td>
+        <td><%= link_to restaurant.website, restaurant.website %></td>
         <td><%= link_to 'Show', restaurant, class: 'btn btn-link' %></td>
         <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: 'btn btn-link' %></td>
         <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-link' %></td>
@@ -36,4 +36,4 @@
 
 <%= link_to 'New Restaurant', new_restaurant_path %>
 
-<%= image_tag 'https://s3.amazonaws.com/reviewsitesp/restaurant_exterior_drawing_cook_diners_icons_colored_cartoon_6834113.jpg' %>
+<%= image_tag 'https://s3.amazonaws.com/reviewsitesp/restaurant_exterior_drawing_cook_diners_icons_colored_cartoon_6834113.jpg', width: '550', height: '200' %>
