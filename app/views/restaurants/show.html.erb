@@ -33,8 +33,18 @@
   </p>
   <%= link_to 'Review', new_restaurant_review_path(@restaurant), class: 'btn btn-link' %> |
   <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'btn btn-link' %> 
-|
-<%= link_to 'Back', restaurants_path, class: 'btn btn-link' %>
+  | 
+  <%= link_to 'Back', restaurants_path, class: 'btn btn-link' %>
+  <br>
+  <br>
+
+  <iframe
+    width="230"
+    height="230"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJg0HiO2KtvExTuiWB6rKhmUUsHXFk6dY
+      &q=<%= @restaurant.address.parameterize %>&zoom=14">
+  </iframe>
 </div>
 <div class = 'reviewloop'>
   <h2> Reviews </h2>
